@@ -1,0 +1,33 @@
+.message_container {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    margin: 10px 0 40px 0;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    background: #337AB7;
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, .4) 0) no-repeat 100% 0 / 30px 30px,
+        linear-gradient(-135deg, transparent 20px, #337AB7 0);
+    filter: drop-shadow(20px 30px rgba(0, 0, 0, 0.1));
+}
+
+.message_container::before {
+    content: ' ';
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.1) 0) 100% 0 no-repeat;
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg)
+}
+
+.message_container .name,
+.message_container .text {
+    text-align: left;
+}
+
+.message_container .time {
+    text-align: right;
+}
